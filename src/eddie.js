@@ -1,5 +1,8 @@
 require('dotenv').config();
 const { Client, IntentsBitField, EmbedBuilder, ActivityType } = require('discord.js');
+var Test = require('./test.json');
+const fs = require('fs');
+//const queues = JSON.parse(fs.readFileSync('src/test.json', "utf8"))
 
 const client = new Client({
     intents: [
@@ -64,6 +67,9 @@ client.on('interactionCreate', async (interaction) => {
           
               interaction.reply({ embeds: [helpMessage2] });
                 break;
+                case 'test':
+                 
+                break;
     }
 });
 
@@ -74,3 +80,10 @@ let status = [
       URL: "https://discord.gg/UUjYwRQmG"
     }
   ];
+
+  const Queue = {
+    channel: "",
+    users: []
+ };
+
+ const queueJson = JSON.stringify(Test);

@@ -9,6 +9,10 @@ const commands = [
     {
         name: 'help',
         description: 'Gets a list of commands for the bot.'
+    },
+    {
+        name: 'test',
+        description: 'test'
     }
 ]
 
